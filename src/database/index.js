@@ -14,7 +14,7 @@ class Database {
      this.mongo();
   }
   init() {
-    this.connection = new Sequelize(configDatabase);
+    this.connection = new Sequelize('postgresql://postgres:CfaXvlwjwumEcGaiGSRCMqLhMwcgVpfQ@autorack.proxy.rlwy.net:41890/railway'/*configDatabase*/);
     models.map(
       (model) => model.init(this.connection))
       .map(
@@ -22,9 +22,9 @@ class Database {
       );
     }
       mongo() {
-        this.mongoConnection = mongoose.connect('mongodb://localhost:27017/devburger-ap');
+        this.mongoConnection = mongoose.connect('mongodb://mongo:zeyxigmOnghQTwkFONJaQTXdHBDrsVJG@autorack.proxy.rlwy.net:35450');
       }
-    
-  }
+     
+    }
 
 export default new Database();
