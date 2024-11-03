@@ -7,7 +7,7 @@ import cors from 'cors';
 import './database';
 
 const corsOptions = {
-    origin: 'https://devburger-top-git-main-erisvaldos-projects.vercel.app',
+    origin: 'https://devburger-top.vercel.app',
     credentials: true,
 }
 
